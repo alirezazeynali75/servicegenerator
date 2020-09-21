@@ -1,5 +1,5 @@
 {
-  "name": "service-generator",
+  "name": "@alirezazeynali/service-generator",
   "version": "1.0.0",
   "description": "generate blockchain services for new coin",
   "main": "index.js",
@@ -9,10 +9,23 @@
   "author": "alireza zeynali",
   "license": "ISC",
   "bin": {
-    "generate": "./index.js"
+    "generate": "index.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
     "inquirer": "^7.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirezazeynali75/servicegenerator.git"
+  },
+  "keywords": [
+    "service-generator",
+    "phinix"
+  ],
+  "bugs": {
+    "url": "https://github.com/alirezazeynali75/servicegenerator/issues"
+  },
+  "homepage": "https://github.com/alirezazeynali75/servicegenerator#readme"
 }
