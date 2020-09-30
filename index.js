@@ -232,7 +232,9 @@ dist
 `;
 const env = `// env file for projects environments`;
 const fs = require('fs');
+const {execSync} = require('child_process')
 const chalk = require('chalk')
+
 function createDirectory(dir) {
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir);
@@ -249,7 +251,7 @@ async function generate () {
             name: 'project',
             message: 'choose the project style',
             type: 'list',
-            choices: ['PPS', new inquirer.Separator(), 'HOTWALLET', new inquirer.Separator(), 'BOTH']
+            choices: ['PPS', new inquirer.Separator(), 'HOTWALLET', new inquirer.Separator(), 'BOTH', new inquirer.Separator(), "WEBSERVICE"]
         }
     ]);
 
@@ -327,6 +329,14 @@ async function generate () {
         await createFile(dir, '.prettierrc.yml', prettierrc);
         await createFile(dir, 'tsconfig.json', tsconfig);
         await createFile(dir, 'package.json', generatePackageJson('HW/' + projectName))
+    }
+    if (project === "WEBSERVICE") {
+        await createFile(directory, '.env', env);
+        await createFile(directory, '.eslintrc.json', eslint);
+        await createFile(directory, '.prettierignore', prettierignore);
+        await createFile(directory, '.prettierrc.yml', prettierrc);
+        await createFile(directory, 'tsconfig.json', tsconfig);
+        await createFile(directory, 'package.json', generatePackageJson('SERVICE' + projectName))
     }
     await console.log(chalk.green.italic('Project generated'))
     await console.log(chalk.blue.italic('in each folders'))
