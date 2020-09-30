@@ -1,66 +1,18 @@
 {
-  "name": "SERVICESERVICE",
-  "version": "1.0.0",
-  "description": "Payment processing system for Phinix blockchain",
+  "name": "service-generator",
+  "version": "1.1.0",
+  "description": "generate blockchain services for new coin",
   "main": "index.js",
-  "author": "Phinix blockchain dept. <alirezazeynali75@gmail.com>",
-  "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest",
-    "build": "npx prettier --write .; gulp",
-    "migrate": "npx sequelize-cli db:migrate",
-    "migrate::redo": "npx sequelize-cli db:migrate:undo; npx sequelize-cli db:migrate",
-    "migrate::undo": "npx sequelize-cli db:migrate:undo",
-    "seeders": "npx sequelize-cli db:seed:all"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Blockchain",
-    "Wallex",
-    "Phinix"
-  ],
-  "devDependencies": {
-    "@tsconfig/node12": "^1.0.7",
-    "@types/bluebird": "^3.5.30",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.1",
-    "@types/validator": "^13.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "eslint": "^7.6.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-git": "^2.10.1",
-    "gulp-if": "^3.0.0",
-    "gulp-prettier": "^3.0.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "jest": "^26.1.0",
-    "prettier": "2.0.5"
+  "author": "alireza zeynali",
+  "license": "ISC",
+  "bin": {
+    "generate": "./index.js"
   },
   "dependencies": {
-    "amqplib": "^0.6.0",
-    "async": "^3.2.0",
-    "axios": "^0.19.2",
     "chalk": "^4.1.0",
-    "dotenv": "^8.2.0",
-    "express-generator": "^4.16.1",
-    "inquirer": "^7.3.3",
-    "lodash": "^4.17.20",
-    "moment": "^2.27.0",
-    "mysql2": "^2.1.0",
-    "node-cron": "^2.0.3",
-    "sequelize": "^5.21.6",
-    "sequelize-cli": "^5.5.1",
-    "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0",
-    "typescript": "^3.9.7",
-    "winston": "^3.2.1",
-    "winston-daily-rotate-file": "^4.4.2"
+    "inquirer": "^7.3.3"
   }
 }
